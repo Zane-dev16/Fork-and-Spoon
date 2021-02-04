@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+}
+
+.banner {
+  width: 100%;
+  height: 800px;
+  background-image: url("/Banner images/Food Banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
