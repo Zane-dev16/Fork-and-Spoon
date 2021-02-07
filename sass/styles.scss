@@ -1,87 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
-
-$pink: #ffffff;
-
-$regular: 400;
-$bold: 700;
-
-@mixin font-stack($color, $weight, $size) {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: $weight;
-  font-size: $size;
-  letter-spacing: 0.09em;
-
-  color: $color;
-}
-
-@mixin default-flex {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-}
+@import "base";
+@import "nav";
+@import "banner";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   z-index: 2;
-}
-
-nav {
-  @include default-flex;
-
-  position: fixed;
-
-  width: 90%;
-  left: 5%;
-  margin-top: 15px;
-
-  div {
-    @include default-flex;
-    width: 150px;
-
-    .logo-image {
-      width: 40px;
-    }
-
-    .logo-description {
-      width: 7vw;
-      height: 2vw;
-    }
-  }
-
-  ul {
-    @include default-flex;
-
-    width: 700px;
-    margin-bottom: 5px;
-
-    list-style-type: none;
-
-    li a {
-      @include font-stack(white, $regular, 1.3rem);
-
-      text-decoration: none;
-    }
-  }
-}
-
-.deals {
-  @include font-stack(white, 700, 2rem);
-
-  width: 120px;
-  height: 40px;
-  background-color: #050d54;
-  border-radius: 50px;
-  border: none;
-}
-
-.banner {
-  width: 100%;
-  height: 800px;
-  background-image: url("/Banner images/Food Banner.jpg");
-  filter: brightness(70%);
-  background-size: cover;
-  background-position: center;
 }

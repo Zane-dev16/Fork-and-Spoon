@@ -1,0 +1,23 @@
+@import "base";
+
+.banner {
+  position: absolute;
+  z-index: -1;
+
+  width: 100%;
+  height: 800px;
+  background-image: url("/Banner images/Food Banner.jpg");
+  filter: brightness(70%);
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  @include font-stack(white, $regular, 80px);
+  width: 500px;
+  padding-top: 170px;
+  margin-left: 5%;
+
+  overflow-wrap: break-word;
+  filter: brightness(100%);
+}

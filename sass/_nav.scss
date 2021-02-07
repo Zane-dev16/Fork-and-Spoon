@@ -1,0 +1,54 @@
+@import "base";
+
+nav {
+  @include default-flex;
+
+  position: fixed;
+
+  width: 86%;
+  left: 5%;
+  margin-top: 15px;
+
+  * {
+    margin-right: 5px;
+  }
+
+  div {
+    @include default-flex;
+    width: 150px;
+
+    .logo-image {
+      width: 40px;
+    }
+
+    .logo-description {
+      width: 7vw;
+      height: 2vw;
+    }
+  }
+
+  ul {
+    @include default-flex;
+
+    width: 700px;
+    margin-bottom: 5px;
+
+    list-style-type: none;
+
+    li a {
+      @include font-stack(white, $regular, 1.3rem);
+
+      text-decoration: none;
+    }
+  }
+
+  button {
+    @include font-stack(white, 700, 2rem);
+
+    width: 120px;
+    height: 40px;
+    background-color: #050d54;
+    border-radius: 50px;
+    border: none;
+  }
+}
