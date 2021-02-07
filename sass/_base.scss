@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
 
-$pink: #ffffff;
+$pink: #ea6c92;
 
 $regular: 400;
 $bold: 700;
@@ -19,4 +19,12 @@ $bold: 700;
 
   align-items: center;
   justify-content: space-between;
+}
+
+@mixin button {
+  @include font-stack(white, $bold, 2rem);
+
+  background-color: $pink;
+  border-radius: 50px;
+  border: none;
 }

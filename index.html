@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="nav">
+    <nav id="nav">
         <div>
-            <img src="logos/FS logo top.png" class="logo-image">
-            <img src="logos/FS logo bottom.png" class="logo-description">
+            <img src="logos/FS logo top.png" id="logo-image">
+            <img src="logos/FS logo bottom.png" id="logo-description">
         </div>
-        <ul>
+        <ul id="linkList">
             <li><a href="">eat</a></li>
             <li><a href="">drink</a></li>
             <li><a href="">experience</a></li>
@@ -19,9 +19,14 @@
             <li><a href="">about</a></li>
             <li><a href="">contact</a></li>
         </ul>
-        <button>Deals</button>
+        <button onclick="log()" >Deals</button>
     </nav> 
+
     <div class="banner"></div>  
     <h1 class="title">The Algarve food and drink catalogue</h1>
+    <button class="eat-button">EAT</button>
+    <div class="empty">.</div>
+
+    <script src="script/blackenNav.js"></script>
 </body>
 </html>
