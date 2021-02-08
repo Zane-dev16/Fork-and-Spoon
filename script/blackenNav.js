@@ -3,6 +3,8 @@ let links = linkList.getElementsByTagName("a")
 let logoImage = document.getElementById("logo-image")
 let logoDescription = document.getElementById("logo-description")
 
+let banner = document.querySelector(".banner")
+
 function setClassBlack(element) {
     let black = document.createAttribute("class")
     black.value = "black"
@@ -29,8 +31,15 @@ document.addEventListener("scroll", () => {
     }
 })
 
+counter = 0
+
 function log() {
-    for (link of links) {
-        console.log("🚀 ~ file: blackenNav.js ~ line 17 ~ link", link)
-    }
+    counter++
+
+
+    banner.style.transform ="translateX(" + (-100 * counter) + "px)"
+
+    console.log(banner)
+    setTimeout(log, 5000);
 }
+

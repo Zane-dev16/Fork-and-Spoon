@@ -2,14 +2,16 @@
 
 .banner {
   position: absolute;
+  display: flex;
   z-index: -1;
-
-  width: 100%;
+  width: 100vw;
+  background-color: black;
   height: 800px;
-  background-image: url("/Banner images/Food Banner.jpg");
-  filter: brightness(70%);
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+
+  img {
+    width: 2000px;
+  }
 }
 
 .title {
