@@ -27,3 +27,18 @@
 
   overflow-wrap: break-word;
 }
+
+.banner-selectors {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+
+  .banner-selector {
+    width: 20px;
+    height: 20px;
+    margin: 90px 10px 0 10px;
+
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+}

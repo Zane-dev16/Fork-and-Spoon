@@ -30,7 +30,15 @@ document.addEventListener("scroll", () => {
 
 let banner = document.querySelector(".slider")
 let bannerImages = banner.getElementsByTagName("img")
-console.log("🚀 ~ file: blackenNav.js ~ line 33 ~ bannerImages", bannerImages.length)
+
+let bannerSelectors = document.querySelector(".banner-selectors")
+let bannerSelector = bannerSelectors.querySelector(".banner-selector")
+
+for (i = 2; i < bannerImages.length; i++) {
+    bannerSelectorCln = bannerSelector.cloneNode(true)
+    bannerSelectors.appendChild(bannerSelectorCln)
+}
+
 counter = 0
 
 function log() {
@@ -50,3 +58,4 @@ banner.addEventListener("transitionend", () => {
         counter = 0
     }
 })
+
