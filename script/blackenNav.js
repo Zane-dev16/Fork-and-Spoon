@@ -3,12 +3,9 @@ let links = linkList.getElementsByTagName("a")
 let logoImage = document.getElementById("logo-image")
 let logoDescription = document.getElementById("logo-description")
 
-let banner = document.querySelector(".banner")
 
 function setClassBlack(element) {
-    let black = document.createAttribute("class")
-    black.value = "black"
-    element.setAttributeNode(black)
+    element.className = "black"
 }
 
 document.addEventListener("scroll", () => {
@@ -31,15 +28,25 @@ document.addEventListener("scroll", () => {
     }
 })
 
+let banner = document.querySelector(".slider")
+let bannerImages = banner.getElementsByTagName("img")
+console.log("🚀 ~ file: blackenNav.js ~ line 33 ~ bannerImages", bannerImages.length)
 counter = 0
 
 function log() {
     counter++
-
-
-    banner.style.transform ="translateX(" + (-100 * counter) + "px)"
-
-    console.log(banner)
-    setTimeout(log, 5000);
+    banner.style.transition = "transform 2s"
+    banner.style.transform = "translateX(" + (-100*counter) + "vw)"
+    setTimeout(log, 5000)
 }
 
+log()
+
+
+banner.addEventListener("transitionend", () => {
+    if (counter == bannerImages.length-1) {
+        banner.style.transition = "none"
+        banner.style.transform = "translateX(0)"
+        counter = 0
+    }
+})
