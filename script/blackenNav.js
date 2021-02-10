@@ -39,23 +39,38 @@ for (i = 2; i < bannerImages.length; i++) {
     bannerSelectors.appendChild(bannerSelectorCln)
 }
 
-counter = 0
-
+let bannerSelectorList = bannerSelectors.getElementsByClassName("banner-selector")
+imageDisplayCounter = 0
+setTimeout(log, 5000)
 function log() {
-    counter++
-    banner.style.transition = "transform 2s"
-    banner.style.transform = "translateX(" + (-100*counter) + "vw)"
+    imageDisplayCounter++
+    changeBannerSelection(imageDisplayCounter)
+    slideBannerLeft()
     setTimeout(log, 5000)
 }
 
-log()
+function changeBannerSelection(imageDisplayCounter) {
+    for (bannerSelector of bannerSelectorList) {
+       bannerSelector.style.backgroundColor = "transparent"
+    }
+    if (imageDisplayCounter == bannerImages.length - 1) {
+        bannerSelectorList[0].style.backgroundColor = "white"
+    }
+    else {
+        bannerSelectorList[imageDisplayCounter].style.backgroundColor = "white"
+    }
+}
 
+function slideBannerLeft() {
+    banner.style.transition = "transform 2s"
+    banner.style.transform = "translateX(" + (-100*imageDisplayCounter) + "vw)"
+}
 
 banner.addEventListener("transitionend", () => {
-    if (counter == bannerImages.length-1) {
+    if (imageDisplayCounter == bannerImages.length-1) {
         banner.style.transition = "none"
         banner.style.transform = "translateX(0)"
-        counter = 0
+        imageDisplayCounter = 0
     }
 })
 
