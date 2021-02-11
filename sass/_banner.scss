@@ -46,6 +46,11 @@
     transition: background-color 0.5s ease-in;
   }
 
+  .banner-selector:focus {
+    outline: none;
+    background-color: red;
+  }
+
   :first-child {
     background-color: white;
   }
