@@ -1,6 +1,6 @@
 @import "base";
 
-.banner {
+.carousel {
   width: 100%;
   position: absolute;
   overflow: hidden;
@@ -28,12 +28,12 @@
   overflow-wrap: break-word;
 }
 
-.banner-selectors {
+.carousel-selection {
   display: flex;
   width: fit-content;
   margin: auto;
 
-  .banner-selector {
+  .carousel-selector {
     width: 20px;
     height: 20px;
     margin: 90px 10px 0 10px;
@@ -46,7 +46,7 @@
     transition: background-color 0.5s ease-in;
   }
 
-  .banner-selector:focus {
+  .carousel-selector:focus {
     outline: none;
     background-color: red;
   }
