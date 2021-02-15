@@ -36,7 +36,7 @@
   .carousel-selector {
     width: 20px;
     height: 20px;
-    margin: 90px 10px 0 10px;
+    margin: 80px 10px 0 10px;
 
     border: 2px solid white;
     border-radius: 50%;
@@ -54,4 +54,12 @@
   :first-child {
     background-color: white;
   }
+}
+
+.scroll-arrow {
+  display: block;
+  width: 50px;
+
+  margin: auto;
+  margin-top: 25px;
 }
