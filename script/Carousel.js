@@ -4,10 +4,14 @@ let autoState = true
 
 let selector = document.querySelector(".carousel-selector")
 let buttons = document.getElementsByClassName("banner-button")
+let buttonSizes = []
 
 for (button of buttons) {
-    button.style.width = button.clientWidth
+    buttonSize = button.clientWidth
+    buttonSizes.push(buttonSize)
+    button.style.width = buttonSizes[0]
 }
+console.log(buttonSizes)
 
 for (i = 2; i < carouselImages.length; i++) {
     selectorCln = selector.cloneNode(false)
@@ -53,8 +57,15 @@ function getCurrentOf(element) {
 }
 
 function autoChangeButtons() {
-    width = getCurrentOf(buttons).clientWidth
-    buttons[0].style.width = width
+    for (button of buttons) {
+        button.style.opacity = "0"
+    }
+    currentButton = getCurrentOf(buttons)
+    currentSize = getCurrentOf(buttonSizes)
+    currentButton.style.opacity = "1"
+    for (button of buttons) {
+        button.style.width = currentSize
+    }
 }
 
 function SelectBanner(selectedSelector) {

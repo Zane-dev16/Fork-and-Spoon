@@ -45,11 +45,7 @@
     opacity: 0;
     width: fit-content;
     height: 46px;
-    transition: width 0.5s;
-  }
-  span {
-    opacity: 1;
-    color: red;
+    transition: width 0.5s, opacity 0.5s;
   }
 
   :first-child {
