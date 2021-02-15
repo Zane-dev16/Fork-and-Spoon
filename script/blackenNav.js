@@ -23,5 +23,6 @@ document.addEventListener("scroll", () => {
     }
 })
 
-
-
+function test() {
+    console.log(document.querySelector("span"))
+}

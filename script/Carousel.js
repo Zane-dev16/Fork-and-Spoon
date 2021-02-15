@@ -2,17 +2,20 @@ let carousel = document.querySelector(".slider")
 let carouselImages = carousel.getElementsByTagName("img")
 let autoState = true
 
-let selection = document.querySelector(".carousel-selection")
-let Selector = selection.querySelector(".carousel-selector")
+let selector = document.querySelector(".carousel-selector")
+let buttons = document.getElementsByClassName("banner-button")
 
-
-for (i = 2; i < carouselImages.length; i++) {
-    SelectorCln = Selector.cloneNode(false)
-    selection.appendChild(SelectorCln)
+for (button of buttons) {
+    button.style.width = button.clientWidth
 }
 
-let SelectorList = selection.getElementsByClassName("carousel-selector")
-let currentSelector = SelectorList[0]
+for (i = 2; i < carouselImages.length; i++) {
+    selectorCln = selector.cloneNode(false)
+    selector.parentElement.appendChild(selectorCln)
+}
+
+let selectors = document.getElementsByClassName("carousel-selector")
+let currentSelector = selectors[0]
 
 let imageDisplayCounter = 0
 setTimeout(autoAnimateCarousel, 5000)
@@ -21,6 +24,7 @@ function autoAnimateCarousel() {
         imageDisplayCounter++
         slideCarousel(imageDisplayCounter)
         autoChangeSelectors()
+        autoChangeButtons()
         setTimeout(autoAnimateCarousel, 5000)
     }
 }
@@ -32,20 +36,25 @@ function slideCarousel(BannerIndex) {
 
 function autoChangeSelectors() {
     makeTransparentSelectors()
-    getCurrentSelector().style.backgroundColor = "white"
+    getCurrentOf(selectors).style.backgroundColor = "white"
 }
 
 function makeTransparentSelectors() {
-    for (Selector of SelectorList) {
-        Selector.style.backgroundColor = "transparent"
+    for (selector of selectors) {
+        selector.style.backgroundColor = "transparent"
     }
 }
 
-function getCurrentSelector() {
+function getCurrentOf(element) {
     if (imageDisplayCounter == carouselImages.length - 1) {
-        return SelectorList[0]
+        return element[0]
     }
-    return SelectorList[imageDisplayCounter]
+    return element[imageDisplayCounter]
+}
+
+function autoChangeButtons() {
+    width = getCurrentOf(buttons).clientWidth
+    buttons[0].style.width = width
 }
 
 function SelectBanner(selectedSelector) {

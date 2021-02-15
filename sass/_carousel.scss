@@ -28,6 +28,39 @@
   overflow-wrap: break-word;
 }
 
+.banner-buttons {
+  display: block;
+  position: relative;
+
+  width: 200px;
+  height: 46px;
+  margin-left: 5%;
+  margin-top: 30px;
+
+  button {
+    @include button;
+    position: absolute;
+
+    padding: 0px 30px 0px 30px;
+    opacity: 0;
+    width: fit-content;
+    height: 46px;
+    transition: width 0.5s;
+  }
+  span {
+    opacity: 1;
+    color: red;
+  }
+
+  :first-child {
+    opacity: 1;
+  }
+  button:hover {
+    width: 200px;
+    background-color: aliceblue;
+  }
+}
+
 .carousel-selection {
   display: flex;
   width: fit-content;
@@ -44,11 +77,6 @@
     background-color: transparent;
 
     transition: background-color 0.5s ease-in;
-  }
-
-  .carousel-selector:focus {
-    outline: none;
-    background-color: red;
   }
 
   :first-child {

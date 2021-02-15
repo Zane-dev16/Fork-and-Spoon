@@ -13,18 +13,12 @@ body {
   background-color: beige;
 }
 
-.empty {
-  height: 1500px;
+button:focus {
+  outline: none;
 }
 
-.eat-button {
-  @include button;
-  display: block;
-
-  width: 160px;
-  height: 46px;
-  margin-left: 5%;
-  margin-top: 30px;
+.empty {
+  height: 1500px;
 }
 
 .test {
