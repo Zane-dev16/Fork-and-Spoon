@@ -59,10 +59,12 @@ function getCurrentOf(element) {
 function autoChangeButtons() {
     for (button of buttons) {
         button.style.opacity = "0"
+        button.style.zIndex = "0"
     }
     currentButton = getCurrentOf(buttons)
     currentSize = getCurrentOf(buttonSizes)
     currentButton.style.opacity = "1"
+    currentButton.style.zIndex = "3"
     for (button of buttons) {
         button.style.width = currentSize
     }

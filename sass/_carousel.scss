@@ -46,14 +46,11 @@
     width: fit-content;
     height: 46px;
     transition: width 0.5s, opacity 0.5s;
-  }
 
-  :first-child {
-    opacity: 1;
-  }
-  button:hover {
-    width: 200px;
-    background-color: aliceblue;
+    &:first-child {
+      opacity: 1;
+      z-index: 3;
+    }
   }
 }
 
@@ -73,10 +70,10 @@
     background-color: transparent;
 
     transition: background-color 0.5s ease-in;
-  }
 
-  :first-child {
-    background-color: white;
+    &:first-child {
+      background-color: white;
+    }
   }
 }
 
