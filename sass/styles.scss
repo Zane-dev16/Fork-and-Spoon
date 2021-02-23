@@ -1,6 +1,8 @@
 @import "base";
 @import "nav";
 @import "carousel";
+@import "categories";
+@import "top5";
 
 * {
   box-sizing: border-box;
@@ -15,60 +17,4 @@ body {
 
 button:focus {
   outline: none;
-}
-
-.empty {
-  background-color: #a8af86;
-  height: 1500px;
-  margin-top: 70px;
-}
-
-.categories {
-  margin: 100px 50px 0px 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  div {
-    width: 320px;
-    transition: transform 0.3s;
-    padding: 15px;
-
-    margin: auto;
-
-    img {
-      width: 300px;
-      height: 220px;
-      object-fit: cover;
-
-      filter: brightness(2);
-    }
-    h1 {
-      margin-top: 10px;
-
-      @include font-stack(black, 300, 35px);
-      text-align: center;
-    }
-    hr {
-      width: 100px;
-      margin: auto;
-      background-color: $pink;
-      border: 1.5px solid $pink;
-    }
-    p {
-      margin: 20px 10px 0px 10px;
-      text-align: center;
-
-      font-family: "Open Sans", sans-serif;
-      font-weight: 400;
-    }
-
-    &:hover {
-      transform: scale(1.1);
-      box-shadow: 10px;
-      p {
-        text-decoration: underline;
-      }
-    }
-  }
 }

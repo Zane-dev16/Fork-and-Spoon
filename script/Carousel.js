@@ -22,7 +22,7 @@ let selectors = document.getElementsByClassName("carousel-selector")
 let currentSelector = selectors[0]
 
 let imageDisplayCounter = 0
-setTimeout(autoAnimateCarousel, 5000)
+setTimeout(autoAnimateCarousel, 3000)
 function autoAnimateCarousel() {
     if (autoState && imageDisplayCounter < carouselImages.length-1) {
         imageDisplayCounter++
