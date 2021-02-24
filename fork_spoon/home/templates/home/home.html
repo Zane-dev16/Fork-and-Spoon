@@ -6,9 +6,12 @@
     <title>Fork and Spoon</title>
 </head>
 <body>
-    {% for slide in slides %}
-        <h1>{{slide.title}}</h1>
-        <img src="{{slide.slide.url}}">
-    {% endfor %}
+    <div class="carousel">
+        <div class="slider">
+            {% for slide in slides %}
+            <img src="{{slide.slide.url}}">
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>
