@@ -1,0 +1,54 @@
+#logo-image {
+  width: 40px;
+}
+
+#logo-description {
+  width: 100px;
+}
+
+nav {
+  @include default-flex;
+
+  position: fixed;
+
+  width: 86%;
+  left: 5%;
+  margin-top: 15px;
+  z-index: 100;
+
+  * {
+    margin-right: 5px;
+  }
+
+  div {
+    @include default-flex;
+    width: 150px;
+  }
+
+  ul {
+    @include default-flex;
+
+    width: 700px;
+    margin-bottom: 5px;
+
+    list-style-type: none;
+
+    li a {
+      @include font-stack(white, $regular, 1.3rem);
+
+      text-decoration: none;
+      transition: color, 0.5s;
+    }
+  }
+
+  button {
+    @include button;
+
+    width: 140px;
+    height: 45px;
+  }
+}
+
+.black {
+  filter: brightness(0);
+}

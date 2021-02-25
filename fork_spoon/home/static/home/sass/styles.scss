@@ -1,8 +1,20 @@
-@import 'carousel';
+@import "base";
+@import "nav";
+@import "carousel";
+@import "categories";
+@import "top5";
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   z-index: 2;
+}
+
+body {
+  background-color: beige;
+}
+
+button:focus {
+  outline: none;
 }
