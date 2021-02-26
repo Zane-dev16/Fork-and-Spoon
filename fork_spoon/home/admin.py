@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Hero, HeroTitle
+from .models import Hero, HeroTitle, NavBar
 
-admin.site.register(Hero)
-admin.site.register(HeroTitle)
+homeModels = [Hero, HeroTitle, NavBar]
+admin.site.register(homeModels)

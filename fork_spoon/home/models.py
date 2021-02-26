@@ -22,3 +22,28 @@ class HeroTitle(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class NavBar(models.Model):
+    logo = models.ImageField(upload_to="images/", default="")
+    logo_text = models.ImageField(upload_to="images/", default="")
+
+    link_1 = models.CharField(max_length=50, default="eat")
+    link_2 = models.CharField(max_length=50, default="drink")
+    link_3 = models.CharField(max_length=50, default="events")
+    link_4 = models.CharField(max_length=50, default="experience")
+
+    button_text = models.CharField(max_length=50, default="DEALS")
+
+    class Meta:
+        verbose_name_plural = "Navigation bar"
+
+    name = Meta()
+
+    def save(self, *args, **kwargs):
+        if not self.pk and NavBar.objects.exists():
+            raise SystemError(f'ATTEMPTED TO CREATED 2 {self.name.verbose_name_plural.upper()}S, There can only be one {self.name.verbose_name_plural.lower()}')
+        return super(NavBar, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return "Navigation bar"
