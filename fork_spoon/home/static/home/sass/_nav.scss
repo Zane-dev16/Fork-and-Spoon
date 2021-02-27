@@ -38,13 +38,16 @@ nav {
 
       text-decoration: none;
       transition: color, 0.5s;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
   button {
     @include button;
 
-    width: 140px;
     height: 45px;
   }
 }

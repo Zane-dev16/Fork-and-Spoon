@@ -10,6 +10,8 @@ class NavBar(models.Model):
     link_2 = models.CharField(max_length=50, default="drink")
     link_3 = models.CharField(max_length=50, default="events")
     link_4 = models.CharField(max_length=50, default="experience")
+    link_5 = models.CharField(max_length=50, default="about")
+    link_6 = models.CharField(max_length=50, default="contact")
 
     button_text = models.CharField(max_length=50, default="DEALS")
 
