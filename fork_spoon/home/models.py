@@ -6,12 +6,12 @@ class NavBar(models.Model):
     logo = models.ImageField(upload_to="images/", default="")
     logo_text = models.ImageField(upload_to="images/", default="")
 
-    link_1 = models.CharField(max_length=50, default="eat")
-    link_2 = models.CharField(max_length=50, default="drink")
-    link_3 = models.CharField(max_length=50, default="events")
-    link_4 = models.CharField(max_length=50, default="experience")
-    link_5 = models.CharField(max_length=50, default="about")
-    link_6 = models.CharField(max_length=50, default="contact")
+    link_1 = models.CharField(max_length=50)
+    link_2 = models.CharField(max_length=50)
+    link_3 = models.CharField(max_length=50)
+    link_4 = models.CharField(max_length=50)
+    link_5 = models.CharField(max_length=50)
+    link_6 = models.CharField(max_length=50)
 
     button_text = models.CharField(max_length=50, default="DEALS")
 
@@ -30,8 +30,8 @@ class NavBar(models.Model):
 
 
 class Hero(models.Model):
-    button_text = models.CharField(max_length=30, default="")
-    slide = models.ImageField(upload_to='images/', default="")
+    button_text = models.CharField(max_length=30)
+    slide = models.ImageField(upload_to='images/')
     # date_posted = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -49,3 +49,17 @@ class HeroTitle(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Category(models.Model):
+    category_name = models.CharField(max_length=50)
+
+    image = models.ImageField(upload_to='images/')
+
+    category_description = models.TextField()
+
+    class Meta:
+        verbose_name_plural = "Categories"
+
+    def __str__(self):
+        return self.category_name

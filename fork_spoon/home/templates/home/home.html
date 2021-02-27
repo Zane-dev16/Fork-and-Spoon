@@ -45,30 +45,14 @@
 
 
     <div class="categories">
+        {% for category in categories %}
         <div>
-            <img src="Images/Food Banner.jpg" alt="">
-            <h1>EAT</h1>
+            <img src="{{category.image.url}}" alt="">
+            <h1>{{category.category_name}}</h1>
             <hr>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.,</p>
+            <p>{{category.category_description}}</p>
         </div>
-        <div>
-            <img src="Images/Drink Banner.jpg" alt="">
-            <h1>DRINK</h1>
-            <hr>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.,</p>
-        </div>
-        <div>
-            <img src="Images/Food Banner 3.jpg" alt="">
-            <h1>EVENTS</h1>
-            <hr>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.,</p>
-        </div>
-        <div>
-            <img src="Images/Food Banner.jpg" alt="">
-            <h1>EXPERIENCE</h1>
-            <hr>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.,</p>
-        </div>
+        {% endfor %}
     </div>
 
     <div class="top5">.

@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import NavBar, Hero, HeroTitle
+from .models import NavBar, Hero, HeroTitle, Category
 
 
 def home(request):
     context = {
         'navbar': NavBar.objects.first(),
         'slides': Hero.objects.all(),
-        'title': HeroTitle.objects.first()
+        'title': HeroTitle.objects.first(),
+        'categories': Category.objects.all()
     }
     return render(request, 'home/home.html', context)
 
