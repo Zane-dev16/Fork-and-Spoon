@@ -1,49 +1,48 @@
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fork + Spoon</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{% static 'home/css/styles.css' %}">
 </head>
 <body>
     <nav id="nav">
         <div>
-            <img src="logos/FS logo top.png" id="logo-image">
-            <img src="logos/FS logo bottom.png" id="logo-description">
+            <img src="{{navbar.logo.url}}" id="logo-image">
+            <img src="{{navbar.logo_text.url}}" id="logo-description">
         </div>
         <ul id="linkList">
-            <li><a href="eat.html">eat</a></li>
-            <li><a href="">drink</a></li>
-            <li><a href="">experience</a></li>
-            <li><a href="">events</a></li>
-            <li><a href="">about</a></li>
-            <li><a href="">contact</a></li>
+            <li><a href="">{{navbar.link_1}}</a></li>
+            <li><a href="">{{navbar.link_2}}</a></li>
+            <li><a href="">{{navbar.link_3}}</a></li>
+            <li><a href="">{{navbar.link_4}}</a></li>
+            <li><a href="">{{navbar.link_5}}</a></li>
+            <li><a href="">{{navbar.link_6}}</a></li>
         </ul>
-        <button onclick="test()">Deals</button>
+        <button onclick="test()">{{navbar.button_text}}</button>
     </nav>
 
     <div class="carousel">
         <div class="slider">
-            <img src="/Images/Food Banner.jpg">
-            <img src="/Images/Drink Banner.jpg">
-            <img src="/Images/Food Banner 3.jpg">
-            <img src="/Images/Drink Banner.jpg">
-            <img src="/Images/Food Banner.jpg">
+            {% for slide in slides %}
+            <img src="{{slide.slide.url}}">
+            {% endfor %}
+            <img src="{{ slides.first.slide.url }}" alt="">
         </div>
     </div>
 
-    <h1 class="title">The Algarve food and drink catalogue</h1>
+    <h1 class="title">{{ title }}</h1>
     <div class="banner-buttons">
-        <button onclick="location.href = 'eat.html'" class="banner-button">EAT</button>
-        <button class="banner-button">Drink</button>
-        <button class="banner-button">Events</button>
-        <button class="banner-button">Experience</button>
+        {% for slide in slides %}
+        <button class="banner-button">{{slide.button_text}}</button>
+        {% endfor %}
     </div>
     
     <div class="carousel-selection">
         <button class="carousel-selector" onclick="SelectBanner(this)"></button>
     </div>
-    <img src="Images/downArrow.svg" class="scroll-arrow">
+
 
     <div class="categories">
         <div>
@@ -86,7 +85,7 @@
         <hr>
     </div>
 
-    <script src="script/blackenNav.js"></script>
-    <script src="script/Carousel.js"></script>
+    <script src="{% static 'home/script/blackenNav.js' %}"></script>
+    <script src="{% static 'home/script/Carousel.js' %}"></script
 </body>
 </html>

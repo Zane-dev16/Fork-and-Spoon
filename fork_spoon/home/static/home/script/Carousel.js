@@ -57,12 +57,16 @@ function getCurrentOf(element) {
 }
 
 function autoChangeButtons() {
+    currentButton = getCurrentOf(buttons)
+    currentSize = getCurrentOf(buttonSizes)
+    ChangeButtons(currentButton, currentSize)
+}
+
+function ChangeButtons(currentButton, currentSize) {
     for (button of buttons) {
         button.style.opacity = "0"
         button.style.zIndex = "0"
     }
-    currentButton = getCurrentOf(buttons)
-    currentSize = getCurrentOf(buttonSizes)
     currentButton.style.opacity = "1"
     currentButton.style.zIndex = "3"
     for (button of buttons) {
@@ -74,7 +78,9 @@ function SelectBanner(selectedSelector) {
     autoState = false
     makeTransparentSelectors()
     selectedSelector.style.backgroundColor = "white"
-    slideCarousel(getIndexof(selectedSelector))
+    bannerIndex = getIndexof(selectedSelector)
+    slideCarousel(bannerIndex)
+    ChangeButtons(buttons[bannerIndex], buttonSizes[bannerIndex])
 }
 
 function getIndexof(element) {
