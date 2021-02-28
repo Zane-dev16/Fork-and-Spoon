@@ -68,6 +68,9 @@ class Category(models.Model):
 class Top5(models.Model):
     Top_5 = models.CharField(max_length=100, default="Portuguese")
 
+    def __str__(self):
+        return "Top 5 " + self.Top_5
+
 
 class Top(models.Model):
     Top_5_group = models.ForeignKey(Top5, on_delete=models.CASCADE)

@@ -56,14 +56,12 @@
     </div>
 
     <div class="top5">.
-        <h1>TOP 5 PORTUGUESE</h1>
+        <h1>TOP 5 {{top5.first.Top_5}}</h1>
         <hr>
         <div>
-            <img src="/Images/Food Banner.jpg">
-            <img src="/Images/Drink Banner.jpg">
-            <img src="/Images/Food Banner 3.jpg">
-            <img src="/Images/Drink Banner.jpg">
-            <img src="/Images/Food Banner.jpg">
+            {% for dish in top5.first.top_set.all %}
+            <img src="{{dish.image.url}}">
+            {% endfor %}
         </div>
         <h1>TOP 5 JAPANESE</h1>
         <hr>

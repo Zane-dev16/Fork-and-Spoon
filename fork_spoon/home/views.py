@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import NavBar, Hero, HeroTitle, Category
+from .models import NavBar, Hero, HeroTitle, Category, Top5
 
 
 def home(request):
@@ -8,7 +8,8 @@ def home(request):
         'navbar': NavBar.objects.first(),
         'slides': Hero.objects.all(),
         'title': HeroTitle.objects.first(),
-        'categories': Category.objects.all()
+        'categories': Category.objects.all(),
+        'top5': Top5.objects.all()
     }
     return render(request, 'home/home.html', context)
 
