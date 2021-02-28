@@ -63,3 +63,18 @@ class Category(models.Model):
 
     def __str__(self):
         return self.category_name
+
+
+class Top5(models.Model):
+    Top_5 = models.CharField(max_length=100, default="Portuguese")
+
+
+class Top(models.Model):
+    Top_5_group = models.ForeignKey(Top5, on_delete=models.CASCADE)
+
+    image = models.ImageField(upload_to="images/")
+    restaurant_name = models.CharField(max_length=100)
+    description = models.TextField(default="")
+
+    class Meta:
+        verbose_name_plural = "Dishes"
