@@ -55,7 +55,7 @@
         {% endfor %}
     </div>
 
-    <div class="top5">.
+    <div class="top5">
         <h1>TOP 5 {{top5.first.Top_5}}</h1>
         <hr>
         <div>
@@ -63,9 +63,11 @@
             <img src="{{dish.image.url}}">
             {% endfor %}
         </div>
-        <h1>TOP 5 JAPANESE</h1>
-        <hr>
+
+        <div class="vertical-line"></div>
     </div>
+
+
 
     <script src="{% static 'home/script/blackenNav.js' %}"></script>
     <script src="{% static 'home/script/Carousel.js' %}"></script
