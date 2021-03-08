@@ -81,3 +81,6 @@ class Top(models.Model):
 
     class Meta:
         verbose_name_plural = "Dishes"
+
+class Example(models.Model):
+    image = models.ImageField(upload_to='images/')
