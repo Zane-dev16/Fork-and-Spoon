@@ -37,6 +37,7 @@
     }
 
     .example {
+        display: inline-block;
         position: relative;
         margin-left: 5.5%;
         margin-top: 100px;
@@ -66,4 +67,16 @@
             width:250px
         }
     }
+
+    .sub-top5 {
+        display: inline-block;
+        width: 520px;
+        height: 500px;
+        margin-left: 100px;
+        transform: translateY(75px);
+
+        border-left: 1px solid #6F6B6B;
+    }
+    
 }
+
