@@ -15,6 +15,13 @@ $bold: 700;
   color: $color;
 }
 
+@mixin font-stack2($color, $weight, $size) {
+  font-family: "Open Sans", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
 @mixin default-flex {
   display: flex;
 

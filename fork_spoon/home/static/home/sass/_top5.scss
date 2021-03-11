@@ -1,6 +1,6 @@
 .top5 {
     background-color: #a8af86;
-    height: 1500px;
+    height: auto;
     margin-top: 70px;
 
 
@@ -31,8 +31,6 @@
             margin: auto;
 
             object-fit: cover;
-      
-            filter: brightness(2);
         }
     }
 
@@ -70,12 +68,38 @@
 
     .sub-top5 {
         display: inline-block;
-        width: 520px;
         height: 500px;
         margin-left: 100px;
-        transform: translateY(75px);
+        padding-top: 50px;
 
         border-left: 1px solid #6F6B6B;
+
+        .top-link {
+            display:flex;
+            margin: 30px;
+            margin-left: 100px;
+
+            img{
+                display: block;
+                width: 97px;
+                height: 97px;
+            }
+
+            &__description {
+                margin: 3px 0 0 30px;
+
+                h3 {
+                    @include font-stack(black, $bold, 22px)
+                }
+
+                p {
+                    @include font-stack2(black, 300, 100%);
+
+                    margin-top: 10px;
+                    width: 70%;
+                }
+            }
+        }
     }
     
 }

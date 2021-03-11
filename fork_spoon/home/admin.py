@@ -4,7 +4,7 @@ from .models import NavBar, Hero, HeroTitle, Category, Top5, Top, Example
 
 class TopInline(admin.StackedInline):
     model = Top
-    extra = 5
+    extra = 0
 
 
 class Top5Admin(admin.ModelAdmin):
