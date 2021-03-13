@@ -77,7 +77,7 @@ class Top(models.Model):
 
     image = models.ImageField(upload_to="images/")
     restaurant_name = models.CharField(max_length=100)
-    description = models.TextField(default="")
+    description = models.TextField(default="", blank=True)
 
     class Meta:
         verbose_name_plural = "Dishes"
