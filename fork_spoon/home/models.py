@@ -68,6 +68,18 @@ class Category(models.Model):
 class Top5(models.Model):
     Top_5 = models.CharField(max_length=100, default="Portuguese")
 
+    Description = models.TextField(default="Portuguese")
+
+    def create_links(self):
+        string = self.Description
+        if "{" in string:
+            bracket_text = string[string.index("{"):string.index("]") + 1]
+            link_text = string[string.index("{") + 1:string.index("}")]
+            link = string[string.index("[") + 1:string.index("]")]
+            self.Description = string.replace(bracket_text, f"<a href='{link}'>{link_text}</a>")
+            return self.create_links()
+        return string
+
     def __str__(self):
         return "Top 5 " + self.Top_5
 
