@@ -67,7 +67,6 @@ class Category(models.Model):
 
 class Top5(models.Model):
     Top_5 = models.CharField(max_length=100, default="Portuguese")
-
     Description = models.TextField(default="Portuguese")
 
     def create_links(self):
@@ -88,8 +87,11 @@ class Post(models.Model):
     Appear_on = models.ManyToManyField("Top5")
 
     image = models.ImageField(upload_to="images/")
-    restaurant_name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     description = models.TextField(default="", blank=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Example(models.Model):
