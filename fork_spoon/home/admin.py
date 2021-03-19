@@ -1,17 +1,6 @@
 from django.contrib import admin
-from .models import NavBar, Hero, HeroTitle, Category, Top5, Top, Example
+from .models import NavBar, Hero, HeroTitle, Category, Top5, Post, Example
 
-
-class TopInline(admin.StackedInline):
-    model = Top
-    extra = 0
-
-
-class Top5Admin(admin.ModelAdmin):
-    inlines = [TopInline]
-
-
-homeModels = [Category, NavBar, Hero, HeroTitle, Example]
+homeModels = [Category, NavBar, Hero, HeroTitle, Example, Top5, Post]
 
 admin.site.register(homeModels)
-admin.site.register(Top5, Top5Admin)

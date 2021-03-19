@@ -84,15 +84,12 @@ class Top5(models.Model):
         return "Top 5 " + self.Top_5
 
 
-class Top(models.Model):
-    Top_5_group = models.ForeignKey(Top5, on_delete=models.CASCADE)
+class Post(models.Model):
+    Appear_on = models.ManyToManyField("Top5")
 
     image = models.ImageField(upload_to="images/")
     restaurant_name = models.CharField(max_length=100)
     description = models.TextField(default="", blank=True)
-
-    class Meta:
-        verbose_name_plural = "Dishes"
 
 
 class Example(models.Model):

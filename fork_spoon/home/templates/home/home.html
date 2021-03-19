@@ -80,21 +80,6 @@
                 </div>
             </div>
             {% endfor %}
-            <div class="top-link">
-                <img src="{{top5.first.top_set.first.image.url}}" alt="">
-                <div class="top-link__description">
-                    <h3>Top 5 Portuguese Food</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                </div>
-            </div>
-            
-            <div class="top-link">
-                <img src="{{top5.first.top_set.first.image.url}}" alt="">
-                <div class="top-link__description">
-                    <h3>Top 5 Portuguese Food</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -102,8 +87,6 @@
     <a href="https://www.linkedin.com">youtube</a>
     <script>
         document.body.innerHTML = document.body.innerHTML.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#x27;/g, "/")
-        link = document.querySelector(".top-link__description").querySelector("a")
-        console.log(link)
     </script>
     <script src="{% static 'home/script/blackenNav.js' %}"></script>
     <script src="{% static 'home/script/Carousel.js' %}"></script
