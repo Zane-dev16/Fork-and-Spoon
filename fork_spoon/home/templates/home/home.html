@@ -54,35 +54,36 @@
         </div>
         {% endfor %}
     </div>
-
-    <div class="top5">
-        <h1>TOP 5 {{top5.first.Top_5}}</h1>
-        <hr>
-        <div class="main-top5">
-            {% for dish in top5.first.top_set.all %}
-            <img src="{{dish.image.url}}">
-            {% endfor %}
-        </div>
-
-        <div class="example">
-            <img src="{{example.image.url}}">
-            <div></div>
-            <p>Lorem Ipsum Dolor Si Amet</p>
-        </div>
-
-        <div class="sub-top5">
-            {% for Top5 in top5 %}
-            <div class="top-link">
-                <img src="{{Top5.top_set.first.image.url}}" alt="">
-                <div class="top-link__description">
-                    <h3>{{Top5.Top_5}}</h3>
-                    <p>{{Top5.create_links}}</p>
-                </div>
+        <div class="top5">
+            <h1>TOP 5 {{top5.first.Top_5}}</h1>
+            <hr>
+            <div class="main-top5">
+                {% for dish in top5.first.top_set.all %}
+                <img src="{{dish.image.url}}">
+                {% endfor %}
             </div>
-            {% endfor %}
+
+            <div class="example">
+                <img src="{{example.image.url}}">
+                <div></div>
+                <p>Lorem Ipsum Dolor Si Amet</p>
+            </div>
+
+            <div class="sub-top5">
+                {% for Top5 in top5 %}
+                <div class="top-link">
+                    <img src="{{Top5.post_set.first.image.url}}" alt="">
+                    <div class="top-link__description">
+                        <h3>{{Top5.Top_5}}</h3>
+                        <p>{{Top5.create_links}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
-
+    <div class="feature">
+        <img src="" alt="">
     </div>
     <script>
         document.body.innerHTML = document.body.innerHTML.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#x27;/g, "/")
