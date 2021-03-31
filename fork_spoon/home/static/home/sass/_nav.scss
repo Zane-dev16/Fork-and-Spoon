@@ -1,14 +1,17 @@
 #logo-image {
   width: 40px;
+  transition: filter 0.5s;
+
 }
 
 #logo-description {
   width: 100px;
+  transition: filter 0.5s;
+
 }
 
 nav {
   @include default-flex;
-
   position: fixed;
 
   width: 86%;
@@ -23,6 +26,7 @@ nav {
   div {
     @include default-flex;
     width: 150px;
+
   }
 
   ul {
@@ -37,6 +41,8 @@ nav {
       @include font-stack(white, $regular, 1.3rem);
 
       text-decoration: none;
+      transition: filter 0.5s;
+
 
       &:hover {
         text-decoration: underline;
@@ -52,6 +58,5 @@ nav {
 }
 
 .black {
-  transition: filter 0.5s;
   filter: brightness(0);
 }

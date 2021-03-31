@@ -102,4 +102,19 @@ class Example(models.Model):
 class Feature(models.Model):
     title = models.CharField(max_length=300)
     image = models.ImageField(upload_to='images/')
-    description = models.TextField()
+    description = models.TextField(blank=True)
+
+    CATEGORY_CHOICES = [
+        ('featured chef', 'Featured chef'),
+        ('featured F&B', 'Featured F&B'),
+        ('featured ***', 'Featured ***'),
+    ]
+
+    category = models.CharField(
+        max_length=100,
+        choices=CATEGORY_CHOICES,
+        blank=True
+        )
+
+    def __str__(self):
+        return self.title

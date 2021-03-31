@@ -4,7 +4,7 @@ let logoImage = document.getElementById("logo-image")
 let logoDescription = document.getElementById("logo-description")
 
 document.addEventListener("scroll", () => {
-    if (window.scrollY > 450) {
+    if (window.scrollY > 450 && window.scrollY < 1830) {
         window.requestAnimationFrame(() => {
             for (link of links) {
                 link.className = "black"
