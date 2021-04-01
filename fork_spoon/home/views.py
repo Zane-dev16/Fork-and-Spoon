@@ -11,7 +11,8 @@ def home(request):
         'categories': Category.objects.all(),
         'top5': Top5.objects.all(),
         'example': Example.objects.first(),
-        'featured_chef': Feature.objects.get(category="featured chef")
+        'featured_chef': Feature.objects.get(category="featured chef"),
+        'featured_FandB': Feature.objects.get(category="featured F&B")
     }
     return render(request, 'home/home.html', context)
 

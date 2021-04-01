@@ -5,10 +5,14 @@
     background-color: #555465;
     padding-left: 5.5%;
     padding-top: 120px;
-    padding-bottom: 50000px;
+    padding-bottom: 1000;
     .featured-chef {
         position: relative;
+        width: fit-content;
         height: 350px;
+        margin-bottom: 150px;
+
+        transition: transform 0.5s;
 
         img {
             height: 350px;
@@ -33,5 +37,48 @@
 
             @include font-stack(white, $bold, 55px);
         }
+        &:hover{
+            transform: scale(1.05);
+            h1 {
+                text-decoration: underline 2px;
+            }
+        }
     }
-}
+    .subfeatures{
+        display: flex;
+        justify-content: space-between;
+        width: 700px;
+        .featured-FandB {
+            width: fit-content;
+            height: auto;
+            
+            transition: transform 0.3s;
+            
+            img {
+                width: 320px;
+                height: 200px;
+                object-fit: cover;
+            }
+            h1 {
+                width: 330px;
+                margin-top: 10px;
+                margin-bottom: 15px;
+                
+                @include font-stack(white, 300, 27px);
+                text-align: center;
+            }
+            hr {
+                width: 160px;
+                margin: auto;
+                background-color: $pink;
+                border: 1.5px solid $pink;
+            }
+            p {
+                margin: 15px 10px 0px 10px;
+                text-align: center;
+                
+                @include font-stack2(white, 300, 100%);
+            }
+        }
+    }
+    }
