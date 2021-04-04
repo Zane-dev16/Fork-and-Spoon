@@ -47,7 +47,7 @@
     .subfeatures{
         display: flex;
         justify-content: space-between;
-        width: 700px;
+        width: 750px;
         .featured-FandB {
             width: fit-content;
             height: auto;
@@ -62,22 +62,23 @@
             h1 {
                 width: 330px;
                 margin-top: 10px;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
                 
                 @include font-stack(white, 300, 27px);
+                line-height: 1.2em;
                 text-align: center;
             }
             hr {
                 width: 160px;
                 margin: auto;
                 background-color: $pink;
-                border: 1.5px solid $pink;
+                border: 1.2px solid $pink;
             }
             p {
                 margin: 15px 10px 0px 10px;
                 text-align: center;
                 
-                @include font-stack2(white, 300, 100%);
+                @include font-stack2(white, 300, 80%);
             }
         }
     }
