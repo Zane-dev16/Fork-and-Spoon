@@ -85,7 +85,7 @@ class Top5(models.Model):
 
 
 class Post(models.Model):
-    Appear_on = models.ManyToManyField("Top5")
+    eat = models.BooleanField(default=False)
 
     image = models.ImageField(upload_to="images/")
     name = models.CharField(max_length=100)
@@ -118,3 +118,13 @@ class Feature(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Recipe(models.Model):
+
+    dish_name = models.CharField(default="Sushi dish thing something", max_length=1000)
+    image = models.ImageField(upload_to="images/")
+    subtitle = models.CharField(default="LOREM IPSUM", max_length=300)
+
+    def __str__(self):
+        return self.dish_name

@@ -103,6 +103,23 @@
             </div>
         </div>
     </div>
+    <div class="recipes">
+        <h1>RECIPES</h1>
+        <div class="recipes__title">
+            <hr>
+            <small>View all recipes</small>
+            <img src="{% static 'home/images/Vector.svg' %}" >
+        </div>
+        <div class="recipes__carousel">
+            <div>
+                {% for recipe in recipes %}
+                <div class="recipe">
+                    <img src="{{recipe.image.url}}" alt="">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
     <script>
         document.body.innerHTML = document.body.innerHTML.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#x27;/g, "/")
     </script>
