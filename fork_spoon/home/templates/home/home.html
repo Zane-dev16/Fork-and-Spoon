@@ -111,11 +111,11 @@
             <img src="{% static 'home/images/Vector.svg' %}" >
         </div>
         <div class="recipes__carousel">
-            <div>
+            <div class="slider">
                 {% for recipe in recipes %}
-                <div class="recipe">
-                    <img src="{{recipe.image.url}}" alt="">
-                </div>
+                    <div class="recipe">
+                        <img src="{{recipe.image.url}}" alt="">
+                    </div>
                 {% endfor %}
             </div>
         </div>

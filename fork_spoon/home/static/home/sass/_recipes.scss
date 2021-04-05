@@ -23,8 +23,10 @@
     }
 
     &__carousel {
-        margin-left: 8.5%;
-        div {
+        width: 84%;
+        overflow: hidden;
+        margin: 50px 0 0 110px;
+        .slider {
             display: flex;
             .recipe {
                 width: fit-content;
