@@ -22,18 +22,21 @@
         }
     }
 
-    &__carousel {
-        width: 84%;
-        overflow: hidden;
-        margin: 50px 0 0 110px;
-        .slider {
-            display: flex;
-            .recipe {
-                width: fit-content;
-                margin: 25px;
-                img {
-                    width: 250px;
-                    border-radius: 50%;
+    &__carousel { 
+        display: flex;
+        .container {
+            width: 84%;
+            overflow: hidden;
+            margin: 50px 0 0 110px;
+            .slider {
+                display: flex;
+                .recipe {
+                    width: fit-content;
+                    margin: 25px;
+                    img {
+                        width: 250px;
+                        border-radius: 50%;
+                    }
                 }
             }
         }

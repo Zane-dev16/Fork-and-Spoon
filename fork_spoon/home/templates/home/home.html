@@ -108,15 +108,17 @@
         <div class="recipes__title">
             <hr>
             <small>View all recipes</small>
-            <img src="{% static 'home/images/Vector.svg' %}" >
+            <img src="{% static 'home/images/arrow1.svg' %}" >
         </div>
         <div class="recipes__carousel">
-            <div class="slider">
-                {% for recipe in recipes %}
-                    <div class="recipe">
-                        <img src="{{recipe.image.url}}" alt="">
-                    </div>
-                {% endfor %}
+            <div class="container">
+                <div class="slider">
+                    {% for recipe in recipes %}
+                        <div class="recipe">
+                            <img src="{{recipe.image.url}}" alt="">
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
