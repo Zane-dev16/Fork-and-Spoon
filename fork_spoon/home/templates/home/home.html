@@ -111,8 +111,9 @@
             <img src="{% static 'home/images/arrow1.svg' %}" >
         </div>
         <div class="recipes__carousel">
+            <img class="recipe-carousel-arrow" onclick='slideRecipe(-1)' src="{% static 'home/images/arrow2.svg' %}" alt="">
             <div class="container">
-                <div class="slider">
+                <div class="recipe-slider">
                     {% for recipe in recipes %}
                         <div class="recipe">
                             <img src="{{recipe.image.url}}" alt="">
@@ -120,12 +121,14 @@
                     {% endfor %}
                 </div>
             </div>
+            <img class="recipe-carousel-arrow" onclick='slideRecipe(1)' src="{% static 'home/images/arrow2.svg' %}" alt="">
         </div>
     </div>
     <script>
         document.body.innerHTML = document.body.innerHTML.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#x27;/g, "/")
     </script>
     <script src="{% static 'home/script/blackenNav.js' %}"></script>
-    <script src="{% static 'home/script/Carousel.js' %}"></script
+    <script src="{% static 'home/script/Carousel.js' %}"></script>
+    <script src="{% static 'home/script/recipeCarousel.js' %}"></script>
 </body>
 </html>

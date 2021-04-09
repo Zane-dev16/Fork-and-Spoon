@@ -11,7 +11,6 @@ for (button of buttons) {
     buttonSizes.push(buttonSize)
     button.style.width = buttonSizes[0]
 }
-console.log(buttonSizes)
 
 for (i = 2; i < carouselImages.length; i++) {
     selectorCln = selector.cloneNode(false)

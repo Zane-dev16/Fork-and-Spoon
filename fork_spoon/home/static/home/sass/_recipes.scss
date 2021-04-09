@@ -24,12 +24,16 @@
 
     &__carousel { 
         display: flex;
+        width: 95%;
+        margin: 50 0 0 2%;
+        justify-content: center;
         .container {
-            width: 84%;
+            width: 84vw;
             overflow: hidden;
-            margin: 50px 0 0 110px;
-            .slider {
+            .recipe-slider {
                 display: flex;
+
+                transition: transform 1s;
                 .recipe {
                     width: fit-content;
                     margin: 25px;
@@ -38,6 +42,20 @@
                         border-radius: 50%;
                     }
                 }
+            }
+        }
+
+        .recipe-carousel-arrow{
+            transition: 0.5s;
+
+            &:last-child {
+                transform: rotate(180deg);
+                &:hover {
+                    transform: rotate(180deg) scale(1.2);
+                }
+            }
+            &:hover {
+                transform: scale(1.2);
             }
         }
     }
