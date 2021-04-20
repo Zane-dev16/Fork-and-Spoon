@@ -12,6 +12,7 @@
 @import "top5";
 @import "feature";
 @import "recipes";
+@import "latest";
 
 
 
@@ -21,4 +22,22 @@ body {
 
 button:focus {
   outline: none;
+}
+
+.view-more {
+  @include font-stack(black, $regular, 120%);
+
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin-left: 5.2%;
+
+  justify-content: space-between;
+  hr {
+      width: 16vw;
+      border: 2px solid #000000;
+  }
+  img {
+      transform: translate(-2px, 1.2px)
+  }
 }

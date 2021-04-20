@@ -105,7 +105,7 @@
     </div>
     <div class="recipes">
         <h1>RECIPES</h1>
-        <div class="recipes__title">
+        <div class="view-more">
             <hr>
             <small>View all recipes</small>
             <img src="{% static 'home/images/arrow1.svg' %}" >
@@ -123,6 +123,42 @@
             </div>
             <img class="recipe-carousel-arrow" onclick='slideRecipe(1)' src="{% static 'home/images/arrow2.svg' %}" alt="">
         </div>
+    </div>
+    <div class="latest-posts">
+        <h1>Latest Posts</h1>
+        <div class="view-more">
+            <hr>
+            <small>View all recipes</small>
+            <img src="{% static 'home/images/arrow1.svg' %}" >
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Sushi dish thing something
+                        <br>
+                        <small>Lorem ipsum dolor sit amet, consectetur </small>
+                    </td>
+                    <td>
+                        Sushi dish thing something
+                        <br>
+                        <small>Lorem ipsum dolor sit amet, consectetur </small>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="last-row-data">
+                        Sushi dish thing something
+                        <br>
+                        <small>Lorem ipsum dolor sit amet, consectetur </small>
+                    </td>
+                    <td class="last-row-data">
+                        Sushi dish thing something
+                        <br>
+                        <small>Lorem ipsum dolor sit amet, consectetur </small>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script>
         document.body.innerHTML = document.body.innerHTML.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&#x27;/g, "/")

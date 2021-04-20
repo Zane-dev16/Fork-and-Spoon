@@ -1,0 +1,30 @@
+.latest-posts {
+    h1 {
+        @include font-stack(black, $regular, 5vw);
+        padding-top: 50px;
+        margin-left: 5%;
+    }
+    table {
+        border-collapse: collapse;
+        tr {
+            td {
+                @include font-stack(black, $bold, 2em);
+
+                border: 3px solid black;
+                margin: none;
+                padding: 20px 50px 40px 25px;
+
+                small {
+                    @include font-stack2(black, 300, 0.4em);
+
+                    display: block;
+                    margin: 7px 0 0 2px;
+                }
+            }
+
+            .last-row-data {
+                padding-bottom: 100px;
+            }
+        }
+    }
+}
